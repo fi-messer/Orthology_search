@@ -1,0 +1,5 @@
+"","X","Dmel.Gene.stable.ID","Dpse.Gene.stable.ID","Dpse.Gene.name","Dpse.Gene.type","LOC","Dmel.Gene.name.x","Dmel.orthology.confidence","Dmel.orthology.type","Dmel.Gene.name.y","Flybase.annotation.ID","Dmel.Gene.type","Dmel.Gene.description"
+"88",88,"FBgn0000256","LOC6902849","","protein_coding",6902849,"capu",1,"ortholog_many2many","capu","CG3399","protein_coding","cappuccino"
+"16",16,"FBgn0000043","LOC26534122","","protein_coding",26534122,"Act42A",0,"ortholog_one2many","Act42A","CG12051","protein_coding","Actin 42A"
+"17",17,"FBgn0000043","LOC6898658","","protein_coding",6898658,"Act42A",1,"ortholog_one2many","Act42A","CG12051","protein_coding","Actin 42A"
+"2",2,"FBgn0000008","LOC4805701","","protein_coding",4805701,"a",0,"ortholog_one2one","a","CG6741","protein_coding","arc"
