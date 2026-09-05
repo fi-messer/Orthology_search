@@ -17,14 +17,16 @@ save_orthologs <- TRUE # Logical (TRUE or FALSE) TRUE exports converted genes to
 
 # Load the database
 if (exists("dpse_orthology") && is.data.frame(get("dpse_orthology"))){
-  print("database already loaded")
+  print("database pre-loaded")
 } else {
-  (dpse_orthology <- read.csv("dpse_dmel_orthology.csv"))
+  dpse_orthology <- read.csv("dpse_dmel_orthology.csv")
+  print("database imported")
 }
 
 # Load the marker list
 if (file_type == "csv"){
   markers <- read.csv(paste0(markers, ".csv")) # Loads the list of genes
+  print("markers provided as csv")
 } else {
   print("markers provided as list")
 }
@@ -65,12 +67,15 @@ for (m in markers){
                                         regex(paste0("^", m, "$"), ignore_case = TRUE)))}
   print(matching_values)
   }
+print("search completed")
 
 # output dataframe
-orthologs <- dpse_orthology[matching_values,]
+orthologs <- dpse_orthology[matching_values,c(2, 3, 7, 11, 13)]
+orthologs
 
 if(save_orthologs == TRUE){
-  write.csv(orthologs, paste0(prefix, "_dmel_dpse_orthologs.csv"))
+  write.csv(orthologs, paste0(prefix, "orthologues.csv"))
+  print("Output saved as csv")
 } else {
   print("WARNING: Output not saved")
 }
